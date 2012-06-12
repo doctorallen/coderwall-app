@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= '';
+$config['base_url']	= 'http://dev.blennd.com/coderwall-app/';
 
 /*
 |--------------------------------------------------------------------------
