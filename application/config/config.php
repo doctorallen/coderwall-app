@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://dev.blennd.com/coderwall-app/';
+$config['base_url']	= (isset($_SERVER['HTTPS']) ? "https://" : "http://") . $_SERVER['HTTP_HOST'] . '/coderwall-app/';
 
 /*
 |--------------------------------------------------------------------------
