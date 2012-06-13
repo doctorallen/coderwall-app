@@ -358,5 +358,18 @@ $config['rewrite_short_tags'] = FALSE;
 $config['proxy_ips'] = '';
 
 
+/*
+|--------------------------------------------------------------------------
+| Smarty Template Configuration
+|--------------------------------------------------------------------------
+|
+| smarty_template_dir, for setting the directory of your .tpl files
+| smarty_compile_dir, for setting the directory of your compiled .tpl files
+|
+*/
+$config['smarty_template_dir'] = BASEPATH . '../ci-app/templates/';
+$config['smarty_compile_dir']  = BASEPATH . '../ci-app/cache/';
+
+
 /* End of file config.php */
 /* Location: ./application/config/config.php */

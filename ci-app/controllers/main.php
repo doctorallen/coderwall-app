@@ -5,6 +5,6 @@ class Main extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('main-index.php');
+		$this->smartyparser->view('main-index');
 	}
 } // End class Main
