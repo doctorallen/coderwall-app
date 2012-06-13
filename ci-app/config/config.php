@@ -367,9 +367,30 @@ $config['proxy_ips'] = '';
 | smarty_compile_dir, for setting the directory of your compiled .tpl files
 |
 */
-$config['smarty_template_dir'] = BASEPATH . '../ci-app/templates/';
-$config['smarty_compile_dir']  = BASEPATH . '../ci-app/cache/';
+$config['smarty_template_dir'] = APPPATH . 'templates/';
+$config['smarty_compile_dir']  = APPPATH . 'cache/';
 
+
+/*
+|--------------------------------------------------------------------------
+| Custom Autoloader for Custom Base Controllers
+|--------------------------------------------------------------------------
+|
+*/
+function __autoload($class) {
+	// Don't include the CI_ classes. They've already been included
+	if(strpos($class, 'CI_') !== 0) {
+		if (file_exists($file = APPPATH . 'core/' . $class . EXT)) {
+			include $file;
+		}
+
+		else if (file_exists($file = APPPATH . 'libraries/' . $class . EXT)) {
+			include $file;
+		}
+		else {
+		}
+	}
+} 
 
 /* End of file config.php */
 /* Location: ./application/config/config.php */
